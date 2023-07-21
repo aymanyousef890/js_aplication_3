@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="images/bookmark.png" type="image/x-icon">
+  <link rel="stylesheet" href="css/normalize.css" />
+  <link rel="stylesheet" href="css/all.min.css" />
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <title>Aymoon</title>
+</head>
+
+<body>
+
+  <div class="landing container">
+    <h1>Bookmarker</h1>
+
+
+    <div class="py-4 my-5 ff">
+      <h2><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+      <label class="p-2 fw-bold" for="bm"><i class="fa-solid fa-book-bookmark pe-2"></i> Site Name</label>
+      <input type="text" id="bm" placeholder="Bookmark Name" class="form-control mb-4 p-2 ">
+      <label class="p-2 fw-bold" for="su"><i class="fa-solid fa-link pe-2"></i> Site URL</label>
+      <input type="text" id="su" placeholder="bookmark URL" class="form-control mb-4 p-2">
+      <button onclick="add_Bookmark()" class="btn btn-danger d-flex mx-auto px-5 ">submit</button>
+
+    </div>
+    <table class="table container my-3 table-striped table-hover text-center">
+      <thead class="fw-bold">
+        <td>Index</td>
+        <td>Website Name</td>
+        <td>Visit</td>
+        <td>Delete</td>
+      </thead>
+      <tbody id="table">
+      </tbody>
+    </table>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,66 @@
+:root {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "PT Sans Caption", sans-serif;
+    background-color: #f7ecde;
+
+}
+
+.form-control:focus {
+    border-color: #d99c39;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
+
+.ff {
+    border-bottom: 2px dotted black;
+    border-top: 2px dotted black;
+}
+
+.landing h1 {
+    font-size: 50px;
+    font-family: "Pacifico", cursive;
+    position: relative;
+    display: flex;
+    margin: 60px auto;
+    width: fit-content;
+    font-weight: bolder;
+
+}
+
+.landing h1::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 40%;
+    background-color: #fec260;
+    bottom: 0;
+    z-index: -1;
+    transition: all .4s;
+    -webkit-transition: all .4s;
+    -moz-transition: all .4s;
+    -ms-transition: all .4s;
+    -o-transition: all .4s;
+}
+
+.landing h1:hover::before {
+    height: 70%;
+}
+
+h2 {
+    font-family: "Righteous", cursive;
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0px auto 20px;
+    width: fit-content;
+    font-size: 25px;
+    font-weight: 700;
+
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
