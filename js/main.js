@@ -1,10 +1,13 @@
 var Site_Name = document.getElementById('bm')
 var Site_URL = window.document.getElementById('su')
-var all_web_site = []
+var all_web_site;
 var a = Boolean
 if (localStorage.getItem('web') != null) {
-    all_web_site = JSON.parse(localStorage.getItem('web'));
+    all_web_site = JSON.parse(localStorage.getItem('web'))
     show()
+}
+else {
+    all_web_site = []
 }
 
 
@@ -13,6 +16,7 @@ function add_Bookmark() {
         name: Site_Name.value,
         s_url: Site_URL.value
     }
+    a = true
     valid()
     if (a == true && validate()) {
         all_web_site.push(websit)
@@ -21,7 +25,6 @@ function add_Bookmark() {
         clear()
         show()
     }
-    a = false
 }
 function clear() {
     Site_Name.value = ""
@@ -96,7 +99,8 @@ function function3() {
     swal("Success!", "Your data have been saved. Thank you!", "success");
 }
 function valid() {
-    for (var i = 0; i < all_web_site.length; i++) {
+    var c = 1
+    for (var i = 0; i < all_web_site.length || c == 0; i++) {
         if (all_web_site[i].name != Site_Name.value) {
             a = true
         }
@@ -106,6 +110,10 @@ function valid() {
             }
             function9()
             a = false
+            c = 0
+        }
+        else {
+            a = true
         }
     }
 }
